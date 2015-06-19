@@ -1,3 +1,4 @@
+
 <div class="row">
                 <div class="col-lg-12">
                     <div class="bs-component">
@@ -19,6 +20,7 @@
                             </select>
                           
                             <button id="search-by-title-button" type="button" ng-click="submitdata(formvalue)" class="btn-sm btn-primary">Search</button>
+                            <a ui-sref="list" title="Detailed Report" class="btn btn-info">back</a>
                         </div>
                         <div class="hide" id="search-by-title-request">
                             <br />
@@ -37,12 +39,32 @@
                     </div>
                 </div>
             </div>
+            
+             <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Actors</th>
+        <th>Year</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="detail in details track by $index">
+        <td> {{detail.Title}}</td>
+        <td> {{detail.Actors}}</td>
+        <td>{{detail.Year}}</td>
+        <td><img ng-src="{{detail.Poster}}" width="100"></td>
+      </tr>
+     
+    </tbody>
+  </table>
 
-            <div ng-repeat="detail in details track by $index">
+           <!--  <div ng-repeat="detail in details track by $index">
            
             {{detail.Title}}<br>
             {{detail.Actors}}<br>
             {{detail.Year}}<br>
 
             <img ng-src="{{detail.Poster}}">
-            </div>
+            </div> -->

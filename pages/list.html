@@ -1,9 +1,12 @@
 <div class="container">
   <h2>Basic Table</h2>
   <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>    
-  <span>{{ remaining() }} of {{ blogdata.length }} remaining</span>     
-  <a href="" ng-click="removeall()">remove</a>   
-  <a ui-sref="add" title="Detailed Report">add</a>
+  <span>{{ remaining() }} of {{ blogdata.length }} remaining</span>  
+  <div>   
+  <a href="" class="btn btn-danger" ng-click="removeall()">Remove Completed</a>   
+  <a ui-sref="add" class="btn btn-success" title="Detailed Report">Add</a>
+  <a ui-sref="apidata" class="btn btn-success" title="Detailed Report">Api</a>
+  </div>
   <table class="table">
     <thead>
       <tr>
@@ -17,7 +20,9 @@
         <td>{{blog.title}}</td>
         <td>{{blog.des}}</td>
         <td><input type="checkbox" data-ng-model="blog.done" ng-click="change_done($index,blog)">
-            <a ng-click="edit_blog($index)" ng-model="blog.id" ui-sref="edit({id:$index})">edit</a>
+            <a ng-click="edit_blog($index)" ng-model="blog.id" ui-sref="edit({id:$index})">
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+        </a>
         </td>
       </tr>
      
