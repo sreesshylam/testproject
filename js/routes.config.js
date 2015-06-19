@@ -25,6 +25,11 @@
 			templateUrl: "pages/edit.html",
 			controller: 'EditController'
 			})
+			.state('apidata', {
+			url: "/apidata",
+			templateUrl: "pages/apidata.html",
+			controller: 'ApidataController as apictrl'
+			})
 
 			
 			
