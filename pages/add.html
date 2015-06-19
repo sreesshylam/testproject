@@ -1,0 +1,16 @@
+<div class="container">
+<a ui-sref="list" title="Detailed Report">back</a>
+  <h2>Vertical (basic) form</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="email">title:</label>
+      <input type="text" class="form-control" ng-model="formitem.title" id="title" placeholder="Enter title">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Description:</label>
+      <textarea class="form-control" ng-model="formitem.des" ></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-default" ng-click='modalAdd(formitem)'>Submit</button>
+  </form>
+</div>
